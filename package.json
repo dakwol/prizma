@@ -1,0 +1,32 @@
+{
+  "name": "@sborka/prizma",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.17.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=11.0.0"
+  },
+  "scripts": {
+    "dev": "corepack pnpm --filter @sborka/prizma-docs dev",
+    "build": "corepack pnpm --filter @sborka/prizma-docs build",
+    "preview": "corepack pnpm --filter @sborka/prizma-docs preview",
+    "check": "corepack pnpm --filter @sborka/prizma-docs check",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "quality": "corepack pnpm lint && corepack pnpm format:check && corepack pnpm check && corepack pnpm build"
+  },
+  "devDependencies": {
+    "@emnapi/core": "1.11.3",
+    "@emnapi/runtime": "1.11.3",
+    "@eslint/js": "10.0.1",
+    "eslint": "10.8.0",
+    "eslint-plugin-astro": "3.0.1",
+    "globals": "17.7.0",
+    "prettier": "3.9.6",
+    "prettier-plugin-astro": "0.14.1",
+    "typescript-eslint": "8.65.0"
+  }
+}

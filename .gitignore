@@ -1,0 +1,15 @@
+node_modules/
+.pnpm-store/
+.astro/
+dist/
+.vercel/
+.netlify/
+
+*.log
+*.local
+.env
+.env.*
+!.env.example
+
+.DS_Store
+Thumbs.db

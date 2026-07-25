@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 72" role="img" aria-label="СБОРКА Призма">
+  <rect width="72" height="72" rx="8" fill="#161616" />
+  <path d="M18 50L36 14l18 36H18Z" fill="#f2f2f2" />
+  <path d="M36 14v36h18L36 14Z" fill="#7dd3fc" />
+  <text x="96" y="31" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="#161616">СБОРКА</text>
+  <text x="96" y="56" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#161616">Призма</text>
+</svg>
