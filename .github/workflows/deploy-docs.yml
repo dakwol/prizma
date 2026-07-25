@@ -24,6 +24,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11.17.0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -31,16 +36,14 @@ jobs:
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
 
-      - name: Enable pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@11.17.0 --activate
-
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+        with:
+          token: ${{ secrets.PAGES_TOKEN || github.token }}
+          enablement: true
 
       - name: Build docs
         env:
